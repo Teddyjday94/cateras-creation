@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Studio Visit | Catera's Creation</title>
+<meta name="description" content="Request a studio visit or commission consult with Catera's Creation in Gonzales, Louisiana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="wordmark">Catera<span class="wordmark-accent">'s</span> Creation</a>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Journal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="booking.html" class="btn btn-cta nav-cta">Book a Visit</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero on-dark">
+    <div class="texture-veil"></div>
+    <div class="container">
+      <span class="eyebrow">Book a Studio Visit</span>
+      <h1>Let's talk about your piece.</h1>
+      <p class="page-hero-lede">Studio visits run Tuesday through Saturday, by appointment. Tell me a bit about what you're after and I'll follow up within two business days to confirm a time.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container hero-grid">
+
+      <form class="form-grid reveal" data-demo-form novalidate
+            data-submit-label="Request Appointment" data-sending-label="Sending Request…"
+            data-success-message="Request received. Catera will follow up within 2 business days to confirm a time.">
+        <div class="form-row-2">
+          <div class="field">
+            <label for="bk-name">Full name</label>
+            <input id="bk-name" name="name" type="text" required>
+            <p class="field-error">Enter your name.</p>
+          </div>
+          <div class="field">
+            <label for="bk-email">Email</label>
+            <input id="bk-email" name="email" type="email" required>
+            <p class="field-error">Enter a valid email address.</p>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="field">
+            <label for="bk-phone">Phone</label>
+            <input id="bk-phone" name="phone" type="tel" placeholder="(225) 555-0148">
+          </div>
+          <div class="field">
+            <label for="bk-type">What's this for?</label>
+            <select id="bk-type" name="type" required>
+              <option value="">Select one</option>
+              <option>Studio visit</option>
+              <option>Commission consult</option>
+              <option>Purchase an existing piece</option>
+              <option>Something else</option>
+            </select>
+            <p class="field-error">Choose an option.</p>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="field">
+            <label for="bk-date">Preferred date</label>
+            <input id="bk-date" name="date" type="date" required>
+            <p class="field-error">Pick a preferred date.</p>
+          </div>
+          <div class="field">
+            <label for="bk-time">Preferred time</label>
+            <select id="bk-time" name="time" required>
+              <option value="">Select one</option>
+              <option>Morning (10am–12pm)</option>
+              <option>Afternoon (1pm–4pm)</option>
+              <option>Early evening (4pm–6pm)</option>
+            </select>
+            <p class="field-error">Choose a time window.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="bk-message">Tell me about the piece</label>
+          <textarea id="bk-message" name="message" placeholder="Medium, size, subject, budget range, whatever you know so far." required></textarea>
+          <p class="field-error">Add a few details so Catera can prep for the visit.</p>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary btn-block">Request Appointment</button>
+          <p class="form-note">This form is a working demo. Connect it to email or a booking tool before it goes live.</p>
+          <p class="form-status" role="status"></p>
+        </div>
+      </form>
+
+      <div class="reveal">
+        <div class="card" style="background: var(--parchment-50); border: none;">
+          <span class="eyebrow">Good to Know</span>
+          <div class="process-list" style="margin-top: 1rem;">
+            <div class="process-item" style="padding: 1.1rem 0;">
+              <div><h4 style="font-size:1rem;">Studio hours</h4><p style="margin-top:.3rem;">Tuesday–Saturday, by appointment only.</p></div>
+            </div>
+            <div class="process-item" style="padding: 1.1rem 0;">
+              <div><h4 style="font-size:1rem;">Response time</h4><p style="margin-top:.3rem;">Every request gets a reply within two business days.</p></div>
+            </div>
+            <div class="process-item" style="padding: 1.1rem 0; border-bottom: none;">
+              <div><h4 style="font-size:1rem;">Deposits</h4><p style="margin-top:.3rem;">Commissions start with a deposit once we agree on scope and price.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark small" style="color:#fbf7ee;">Catera's Creation</p>
+      <p class="footer-tagline">Original paintings, drawings &amp; sculpture from Gonzales, Louisiana.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <p class="footer-heading">Visit</p>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="booking.html">Book a Visit</a>
+      </div>
+      <div>
+        <p class="footer-heading">Studio</p>
+        <a href="about.html">About</a>
+        <a href="blog.html">Journal</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <p class="footer-heading">Connect</p>
+        <a href="contact.html">Contact</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">@Catera'sCreations</a>
+        <button class="link-btn" data-open-privacy>Privacy &amp; Terms</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Catera's Creation. All artwork remains the property of the artist.</p>
+    <p class="footer-credit">Site by Sidequest Creative</p>
+  </div>
+</footer>
+
+<div class="modal" id="privacyModal" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <button class="modal-close" data-close-privacy aria-label="Close">×</button>
+    <h3 id="privacyTitle">Privacy &amp; Terms</h3>
+    <p>This is placeholder policy text for demonstration. Before launch, replace this with a real privacy policy and terms of use covering how inquiries, booking details, and newsletter emails are collected and stored.</p>
+    <p>Images and descriptions of artwork on this site are the property of Catera's Creation and may not be reproduced without permission.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
