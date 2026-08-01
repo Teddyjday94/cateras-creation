@@ -1,188 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery | Catera's Creation</title>
-<meta name="description" content="Browse original paintings, drawings, and sculpture by Catera's Creation.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Catera's Creation</title>
+    <!-- Links to your existing stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="index.html" class="wordmark">Catera<span class="wordmark-accent">'s</span> Creation</a>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="services.html">Services &amp; Pricing</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Journal</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a href="booking.html" class="btn btn-cta nav-cta">Book a Visit</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">Catera's Creation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="services.html">Services & Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="booking.html" class="btn-book">BOOK A VISIT</a>
+    </header>
 
-<main>
-
-  <section class="page-hero on-dark">
-    <div class="texture-veil"></div>
-    <div class="container">
-      <span class="eyebrow">Gallery</span>
-      <h1>A working portfolio.</h1>
-      <p class="page-hero-lede">Sample pieces shown here as placeholders. Swap in real studio photography before this goes live. Click any piece for details.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="filter-row reveal">
-        <button class="filter-btn active" data-filter="all">All Work</button>
-        <button class="filter-btn" data-filter="painting">Paintings</button>
-        <button class="filter-btn" data-filter="drawing">Drawings</button>
-        <button class="filter-btn" data-filter="sculpture">Sculpture</button>
-      </div>
-
-      <div class="grid grid-3" id="galleryGrid">
-
-        <div class="gallery-item reveal" data-medium="painting" data-paint="art-1" data-title="Bayou Morning" data-meta="Acrylic on canvas · 2025" data-desc="A quiet study of early light over water, built up in loose layers of green and violet.">
-          <div class="art-tile art-1"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Bayou Morning"></button>
-          </div>
-          <div class="placard"><p class="art-title">Bayou Morning</p><p class="art-meta"><span>Acrylic on canvas</span><span>Available</span></p></div>
+    <!-- Main Gallery Content -->
+    <main>
+        <!-- Category Filters -->
+        <div class="gallery-filters">
+            <button class="filter-btn active">ALL WORK</button>
+            <button class="filter-btn">PAINTINGS</button>
+            <button class="filter-btn">DRAWINGS</button>
+            <button class="filter-btn">SCULPTURE</button>
         </div>
 
-        <div class="gallery-item reveal" data-medium="drawing" data-paint="art-4" data-title="Study No. 3" data-meta="Graphite on paper · 2025" data-desc="Part of an ongoing series of quick figure studies, worked in graphite over a single sitting.">
-          <div class="art-tile art-4"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Study No. 3"></button>
-          </div>
-          <div class="placard"><p class="art-title">Study No. 3</p><p class="art-meta"><span>Graphite on paper</span><span>Available</span></p></div>
-        </div>
+        <!-- Artwork Grid -->
+        <section class="gallery-grid">
+            
+            <!-- Bayou Morning -->
+            <article class="gallery-item painting">
+                <img src="BayouMorning.jpeg" alt="Bayou Morning">
+                <div class="item-details">
+                    <h3>Bayou Morning</h3>
+                    <div class="item-meta">
+                        <span class="medium">Acrylic on canvas</span>
+                        <span class="status available">Available</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="sculpture" data-paint="art-6" data-title="Held Form" data-meta="Stoneware · 2024" data-desc="A hand-built stoneware form finished with a matte glaze, fired in two stages.">
-          <div class="art-tile art-6"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Held Form"></button>
-          </div>
-          <div class="placard"><p class="art-title">Held Form</p><p class="art-meta"><span>Stoneware</span><span>Sold</span></p></div>
-        </div>
+            <!-- Study No. 3 -->
+            <article class="gallery-item drawing">
+                <img src="StudyNo3.jpeg" alt="Study No. 3">
+                <div class="item-details">
+                    <h3>Study No. 3</h3>
+                    <div class="item-meta">
+                        <span class="medium">Graphite on paper</span>
+                        <span class="status available">Available</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="painting" data-paint="art-8" data-title="Late Light" data-meta="Oil on panel · 2024" data-desc="A small oil study exploring warm evening light across a porch railing.">
-          <div class="art-tile art-8"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Late Light"></button>
-          </div>
-          <div class="placard"><p class="art-title">Late Light</p><p class="art-meta"><span>Oil on panel</span><span>Available</span></p></div>
-        </div>
+            <!-- Held Form -->
+            <article class="gallery-item sculpture">
+                <img src="HeldForm.jpeg" alt="Held Form">
+                <div class="item-details">
+                    <h3>Held Form</h3>
+                    <div class="item-meta">
+                        <span class="medium">Stoneware</span>
+                        <span class="status sold">Sold</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="drawing" data-paint="art-3" data-title="Two Hands" data-meta="Charcoal on paper · 2024" data-desc="A charcoal study focused on gesture and weight, built from a live reference sitting.">
-          <div class="art-tile art-3"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Two Hands"></button>
-          </div>
-          <div class="placard"><p class="art-title">Two Hands</p><p class="art-meta"><span>Charcoal on paper</span><span>Commissioned</span></p></div>
-        </div>
+            <!-- Late Light -->
+            <article class="gallery-item painting">
+                <img src="LateLight.jpeg" alt="Late Light">
+                <div class="item-details">
+                    <h3>Late Light</h3>
+                    <div class="item-meta">
+                        <span class="medium">Oil on panel</span>
+                        <span class="status available">Available</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="sculpture" data-paint="art-9" data-title="Small Vessel I" data-meta="Earthenware · 2024" data-desc="First in a set of tabletop vessels, thrown and altered by hand.">
-          <div class="art-tile art-9"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Small Vessel I"></button>
-          </div>
-          <div class="placard"><p class="art-title">Small Vessel I</p><p class="art-meta"><span>Earthenware</span><span>Available</span></p></div>
-        </div>
+            <!-- Two Hands -->
+            <article class="gallery-item drawing">
+                <img src="TwoHands.jpeg" alt="Two Hands">
+                <div class="item-details">
+                    <h3>Two Hands</h3>
+                    <div class="item-meta">
+                        <span class="medium">Charcoal on paper</span>
+                        <span class="status commissioned">Commissioned</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="painting" data-paint="art-5" data-title="Ochre Field" data-meta="Acrylic on canvas · 2024" data-desc="An abstract landscape built from broad palette-knife passes in ochre and plum.">
-          <div class="art-tile art-5"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Ochre Field"></button>
-          </div>
-          <div class="placard"><p class="art-title">Ochre Field</p><p class="art-meta"><span>Acrylic on canvas</span><span>Available</span></p></div>
-        </div>
+            <!-- Small Vessel I -->
+            <article class="gallery-item sculpture">
+                <img src="SmallVessel.jpeg" alt="Small Vessel I">
+                <div class="item-details">
+                    <h3>Small Vessel I</h3>
+                    <div class="item-meta">
+                        <span class="medium">Earthenware</span>
+                        <span class="status available">Available</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="drawing" data-paint="art-7" data-title="Portrait Study" data-meta="Ink on paper · 2023" data-desc="A loose ink portrait study, working quickly to capture likeness over detail.">
-          <div class="art-tile art-7"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Portrait Study"></button>
-          </div>
-          <div class="placard"><p class="art-title">Portrait Study</p><p class="art-meta"><span>Ink on paper</span><span>Sold</span></p></div>
-        </div>
+            <!-- Ochre Field -->
+            <article class="gallery-item painting">
+                <img src="OchreField.jpeg" alt="Ochre Field">
+                <div class="item-details">
+                    <h3>Ochre Field</h3>
+                    <div class="item-meta">
+                        <span class="medium">Acrylic on canvas</span>
+                        <span class="status available">Available</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="gallery-item reveal" data-medium="sculpture" data-paint="art-2" data-title="Green Room" data-meta="Mixed media · 2023" data-desc="A mixed-media wall piece combining clay relief with reclaimed wood.">
-          <div class="art-tile art-2"><div class="art-paint"></div>
-            <button class="art-tile-btn" data-open-lightbox aria-label="View Green Room"></button>
-          </div>
-          <div class="placard"><p class="art-title">Green Room</p><p class="art-meta"><span>Mixed media</span><span>Available</span></p></div>
-        </div>
+            <!-- Portrait Study -->
+            <article class="gallery-item drawing">
+                <img src="PortraitStudy.jpeg" alt="Portrait Study">
+                <div class="item-details">
+                    <h3>Portrait Study</h3>
+                    <div class="item-meta">
+                        <span class="medium">I can see **image_13.png**. It shows a GitHub interface where you are preparing to commit several `.jpeg` files to the `main` branch of a repository. 
 
-      </div>
-    </div>
-  </section>
+With file names like `PortraitStudy.jpeg`, `SmallVessel.jpeg`, and `BayouMorning.jpeg`, it looks like you might be uploading the paintings, sketches, and small sculptures for your friend's mock website! 
 
-  <section class="bg-parchment text-center">
-    <div class="container reveal">
-      <h2 style="font-size: clamp(1.7rem, 3vw, 2.2rem);">See something you like?</h2>
-      <p style="margin-top: .8rem; color: var(--ink-600);">Every piece can be purchased as-is, or used as a starting point for a similar commission.</p>
-      <div style="margin-top: 1.6rem;"><a href="contact.html" class="btn btn-primary">Ask About a Piece</a></div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="wordmark small" style="color:#fbf7ee;">Catera's Creation</p>
-      <p class="footer-tagline">Original paintings, drawings &amp; sculpture from Gonzales, Louisiana.</p>
-    </div>
-    <div class="footer-links">
-      <div>
-        <p class="footer-heading">Visit</p>
-        <a href="gallery.html">Gallery</a>
-        <a href="services.html">Services &amp; Pricing</a>
-        <a href="booking.html">Book a Visit</a>
-      </div>
-      <div>
-        <p class="footer-heading">Studio</p>
-        <a href="about.html">About</a>
-        <a href="blog.html">Journal</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-      <div>
-        <p class="footer-heading">Connect</p>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">@Catera'sCreations</a>
-        <button class="link-btn" data-open-privacy>Privacy &amp; Terms</button>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Catera's Creation. All artwork remains the property of the artist.</p>
-    <p class="footer-credit">Site by Sidequest Creative</p>
-  </div>
-</footer>
-
-<div class="modal" id="privacyModal" aria-hidden="true">
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-    <button class="modal-close" data-close-privacy aria-label="Close">×</button>
-    <h3 id="privacyTitle">Privacy &amp; Terms</h3>
-    <p>This is placeholder policy text for demonstration. Before launch, replace this with a real privacy policy and terms of use covering how inquiries, booking details, and newsletter emails are collected and stored.</p>
-    <p>Images and descriptions of artwork on this site are the property of Catera's Creation and may not be reproduced without permission.</p>
-  </div>
-</div>
-
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox-panel">
-    <button class="lightbox-close" data-close-lightbox aria-label="Close">×</button>
-    <div class="lightbox-art"></div>
-    <div class="lightbox-body">
-      <p class="art-title"></p>
-      <p class="art-meta"></p>
-      <p class="lightbox-desc"></p>
-      <div class="lightbox-actions"><a href="contact.html" class="btn btn-primary">Ask About This Piece</a></div>
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+How can I help you with this project today? Are you looking for some HTML/CSS to build a responsive image gallery for these pieces, or do you need help with something else?
