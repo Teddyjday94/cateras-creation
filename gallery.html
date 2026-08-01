@@ -1,3 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Catera's Creation</title>
+  <meta name="description" content="Browse original paintings, drawings, and sculpture from Catera's Creation in Gonzales, Louisiana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="wordmark">Catera<span class="wordmark-accent">'s</span> Creation</a>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="services.html">Services &amp; Pricing</a><a href="about.html">About</a><a href="blog.html">Journal</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="booking.html" class="btn btn-cta nav-cta">Book a Visit</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero on-dark">
+    <div class="texture-veil"></div>
+    <div class="container">
+      <span class="eyebrow">The Work</span>
+      <h1>Original pieces, made slowly.</h1>
+      <p class="page-hero-lede">A working collection of paintings, drawings, and sculpture made in the Gonzales studio. Availability changes as new work leaves the shelf.</p>
+    </div>
+  </section>
+
+  <section class="gallery-showcase">
+    <div class="container">
+      <div class="section-head-row reveal">
+        <div class="section-head"><span class="eyebrow">Browse the collection</span><h2>Work from the studio.</h2></div>
+        <div class="filter-row" role="group" aria-label="Filter artwork">
+          <button class="filter-btn active" data-filter="all" type="button">All work</button>
+          <button class="filter-btn" data-filter="painting" type="button">Paintings</button>
+          <button class="filter-btn" data-filter="drawing" type="button">Drawings</button>
+          <button class="filter-btn" data-filter="sculpture" type="button">Sculpture</button>
+        </div>
+      </div>
+      <div class="gallery-grid grid grid-3">
+        <article class="gallery-item reveal" data-medium="painting"><div class="art-tile art-1"><div class="art-paint"></div><img class="art-photo" src="BayouMorning.jpeg" alt="Bayou Morning, an acrylic painting inspired by soft Louisiana dawn light"></div><div class="placard"><p class="art-title">Bayou Morning</p><p class="art-meta"><span>Acrylic on canvas</span><span>Available</span></p><p class="art-description">A quiet study of warm light breaking across the bayou at the start of day.</p></div></article>
+        <article class="gallery-item reveal" data-medium="drawing"><div class="art-tile art-4"><div class="art-paint"></div><img class="art-photo" src="StudyNo3.jpeg" alt="Study No. 3, a graphite drawing with layered tonal marks"></div><div class="placard"><p class="art-title">Study No. 3</p><p class="art-meta"><span>Graphite on paper</span><span>Available</span></p><p class="art-description">Layered graphite marks build a patient, close-looking study of form and shadow.</p></div></article>
+        <article class="gallery-item reveal" data-medium="sculpture"><div class="art-tile art-6"><div class="art-paint"></div><img class="art-photo" src="HeldForm.jpeg" alt="Held Form, a hand-built stoneware sculpture with a rounded organic shape"></div><div class="placard"><p class="art-title">Held Form</p><p class="art-meta"><span>Stoneware</span><span>Sold</span></p><p class="art-description">A hand-built vessel-like form shaped around the feeling of being held.</p></div></article>
+        <article class="gallery-item reveal" data-medium="painting"><div class="art-tile art-8"><div class="art-paint"></div><img class="art-photo" src="LateLight.jpeg" alt="Late Light, an oil painting in muted gold and green tones"></div><div class="placard"><p class="art-title">Late Light</p><p class="art-meta"><span>Oil on panel</span><span>Available</span></p><p class="art-description">A late-afternoon palette of ochre, green, and deep shadow gathered on one panel.</p></div></article>
+        <article class="gallery-item reveal" data-medium="drawing"><div class="art-tile art-7"><div class="art-paint"></div><img class="art-photo" src="TwoHands.jpeg" alt="Two Hands, a charcoal drawing focused on gesture and connection"></div><div class="placard"><p class="art-title">Two Hands</p><p class="art-meta"><span>Charcoal on paper</span><span>Commissioned</span></p><p class="art-description">A gestural charcoal study about connection, movement, and the language of hands.</p></div></article>
+        <article class="gallery-item reveal" data-medium="sculpture"><div class="art-tile art-3"><div class="art-paint"></div><img class="art-photo" src="SmallVessel.jpeg" alt="Small Vessel I, a small hand-built earthenware sculpture"></div><div class="placard"><p class="art-title">Small Vessel I</p><p class="art-meta"><span>Earthenware</span><span>Available</span></p><p class="art-description">A compact earthenware vessel with an imperfect profile made to be held and kept close.</p></div></article>
+        <article class="gallery-item reveal" data-medium="painting"><div class="art-tile art-5"><div class="art-paint"></div><img class="art-photo" src="OchreField.jpeg" alt="Ochre Field, an acrylic painting built from earthy yellow and brown tones"></div><div class="placard"><p class="art-title">Ochre Field</p><p class="art-meta"><span>Acrylic on canvas</span><span>Available</span></p><p class="art-description">Earth pigments and broad painted planes turn an open landscape into a feeling.</p></div></article>
+        <article class="gallery-item reveal" data-medium="drawing"><div class="art-tile art-9"><div class="art-paint"></div><img class="art-photo" src="PortraitStudy.jpeg" alt="Portrait Study, a graphite drawing exploring expression and soft contrast"></div><div class="placard"><p class="art-title">Portrait Study</p><p class="art-meta"><span>Graphite on paper</span><span>Available</span></p><p class="art-description">A quiet portrait study focused on expression, soft contrast, and the space between details.</p></div></article>
+        <article class="gallery-item reveal" data-medium="painting"><div class="art-tile art-2"><div class="art-paint"></div><img class="art-photo" src="Green room.jpeg" alt="Green Room, a painting filled with layered green and plum color"></div><div class="placard"><p class="art-title">Green Room</p><p class="art-meta"><span>Mixed media on canvas</span><span>Available</span></p><p class="art-description">A saturated interior-like composition where cool greens meet the studio's signature plum.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-cta bg-parchment text-center">
+    <div class="container reveal"><span class="eyebrow">Looking for something personal?</span><h2>Let's make a piece for your wall.</h2><p>Bring a color, a memory, or an idea. We can start with a conversation at the studio.</p><a href="booking.html" class="btn btn-primary">Book a Studio Visit</a></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner"><div class="footer-brand"><p class="wordmark small">Catera's Creation</p><p class="footer-tagline">Original paintings, drawings &amp; sculpture from Gonzales, Louisiana.</p></div><div class="footer-links"><div><p class="footer-heading">Visit</p><a href="gallery.html">Gallery</a><a href="services.html">Services &amp; Pricing</a><a href="booking.html">Book a Visit</a></div><div><p class="footer-heading">Studio</p><a href="about.html">About</a><a href="blog.html">Journal</a><a href="faq.html">FAQ</a></div><div><p class="footer-heading">Connect</p><a href="contact.html">Contact</a><a href="https://instagram.com" target="_blank" rel="noopener">@Catera'sCreations</a></div></div></div>
+  <div class="footer-bottom"><p>© 2026 Catera's Creation. All artwork remains the property of the artist.</p><p class="footer-credit">Site by Sidequest Creative</p></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
 // Catera's Creation — shared site behavior
 (function () {
   'use strict';
