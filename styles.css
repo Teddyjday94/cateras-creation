@@ -219,7 +219,7 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 .art-tag {
   position: absolute; left: 0; right: 0; bottom: 0; padding: .8rem .9rem;
   background: linear-gradient(0deg, rgba(0,0,0,.55), transparent);
-  color: var(--paper-0); opacity: 0; transform: translateY(6px);
+  color: var(--paper-0); opacity: 0; transform: translateY(6px); z-index: 2;
   transition: opacity .25s var(--ease), transform .25s var(--ease);
 }
 .art-tile:hover .art-tag, .art-tile:focus-within .art-tag { opacity: 1; transform: none; }
