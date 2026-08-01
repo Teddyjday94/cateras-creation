@@ -1,200 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catera's Creation | Original Paintings, Drawings & Sculpture | Gonzales, LA</title>
-<meta name="description" content="Catera's Creation is an independent art studio in Gonzales, Louisiana making original paintings, drawings and sculpture. Browse the gallery or book a studio visit.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catera's Creation | Art & Sculptures in Gonzales, LA</title>
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-purple: #4A235A;
+            --primary-green: #0E6655;
+            --bg-light: #FDFBF7;
+            --text-dark: #2C3E50;
+            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            color: var(--primary-purple);
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .btn-book {
+            background-color: var(--primary-green);
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-book:hover {
+            background-color: var(--primary-purple);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 5%;
+            background: linear-gradient(135deg, rgba(74, 35, 90, 0.05) 0%, rgba(14, 102, 85, 0.05) 100%);
+            min-height: 70vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 550px;
+            padding-right: 40px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero-image {
+            flex: 1;
+            height: 450px;
+            background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Generic Section Styles */
+        .standard-section {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-purple);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Art & Review Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .art-img {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary-purple);
+        }
+
+        .card-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Functional/Form Section */
+        .functional-section {
+            padding: 100px 5%;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            background-color: #f0ebe1;
+        }
+
+        .form-container {
+            flex: 1;
+            min-width: 320px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .form-container h3 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            background-color: var(--primary-purple);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-green);
+        }
+
+        /* Footer & Newsletter */
+        footer {
+            background-color: #1A1A1A;
+            color: white;
+            padding: 60px 5% 30px 5%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            flex: 1;
+        }
+
+        .newsletter-form button {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-green);
+        }
+
+        .legal {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .hero { flex-direction: column; text-align: center; padding: 40px 5%; }
+            .hero-content { padding-right: 0; margin-bottom: 40px; }
+            .hero-image { width: 100%; height: 300px; }
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="index.html" class="wordmark">Catera<span class="wordmark-accent">'s</span> Creation</a>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="services.html">Services &amp; Pricing</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Journal</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a href="booking.html" class="btn btn-cta nav-cta">Book a Visit</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+    <header>
+        <h1>CATERA'S CREATION</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <!-- Calendly Booking Trigger -->
+            <a href="" onclick="event.preventDefault(); Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_LINK_HERE'});return false;" class="btn-book">Book Appointment</a>
+        </nav>
+        <!-- Google Translate Widget -->
+        <div id="google_translate_element"></div>
+    </header>
 
-<main>
-
-  <!-- HERO -->
-  <section class="hero on-dark">
-    <div class="texture-veil"></div>
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Gonzales, Louisiana · Studio &amp; Gallery</span>
-        <h1>Art that starts on a<br><em>blank canvas</em> and ends up<br>on your wall.</h1>
-        <svg class="brush brush-underline reveal" viewBox="0 0 300 40" aria-hidden="true"><path d="M4,20 C40,4 70,34 110,14 C150,-6 190,28 230,10 C260,-2 280,18 296,8"/></svg>
-        <p class="hero-lede">Catera paints, draws, and sculpts original work by hand in a small home studio outside Baton Rouge. No prints, no templates, just one piece at a time.</p>
-        <div class="hero-actions">
-          <a href="gallery.html" class="btn btn-primary">View the Gallery</a>
-          <a href="booking.html" class="btn btn-outline">Book a Studio Visit</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Art Crafted for the Modern Eye</h2>
+            <p>Original paintings, drawings, and sculptures originating from Gonzales, Louisiana. Designed to bring character, depth, and creative voice into your space.</p>
+            <a href="#gallery" class="btn-book">Explore Portfolio</a>
         </div>
-        <div class="hero-meta">
-          <span>Paintings</span><span>Drawings</span><span>Sculpture</span>
-        </div>
-      </div>
-      <div class="hero-visual art-tile art-2 reveal">
-        <div class="art-paint"></div>
-      </div>
-    </div>
-  </section>
+        <div class="hero-image"></div>
+    </section>
 
-  <!-- WHAT SHE MAKES -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">What I Make</span>
-        <h2>Three mediums, one hand.</h2>
-      </div>
-      <div class="grid grid-3">
-        <div class="card card-medium reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-4.4 0-8 3-8 7 0 2.2 1.6 3 3 3s2-1 3-1 1 1 2 1c3 0 5-2 5-5 0-2.8-2.2-5-5-5z"/><circle cx="9" cy="9" r="1"/><circle cx="13" cy="7" r="1"/></svg>
-          <h3>Paintings</h3>
-          <p>Acrylic and oil originals on canvas or panel, from small studies to statement pieces for a living room wall.</p>
-          <a href="services.html" class="btn-ghost">See sizes &amp; pricing →</a>
-        </div>
-        <div class="card card-medium reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20l3-1 11-11-2-2L5 17l-1 3z"/><path d="M14 6l2 2"/></svg>
-          <h3>Drawings</h3>
-          <p>Graphite, charcoal, and ink portraits and studies, a faster, more intimate way to commission original work.</p>
-          <a href="services.html" class="btn-ghost">See sizes &amp; pricing →</a>
-        </div>
-        <div class="card card-medium reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M6 8c0-3 2.7-5 6-5s6 2 6 5-2.7 5-6 5-6-2-6-5z"/><path d="M8 21h8"/></svg>
-          <h3>Sculpture</h3>
-          <p>Hand-built clay and mixed-media forms, fired and finished in-studio, from tabletop pieces to larger commissions.</p>
-          <a href="services.html" class="btn-ghost">See sizes &amp; pricing →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="standard-section" style="background-color: var(--bg-light);">
+        <h3 class="section-title">About the Artist</h3>
+        <p style="max-width: 800px; margin: 0 auto; text-align: center; color: #555; font-size: 1.1rem;">
+            Based in Gonzales, Louisiana, Catera's Creation specializes in bold, expressive art pieces. From detailed drawings to textured paintings and intricate sculptures, every creation is designed to bridge the gap between hip, modern aesthetics and mature, timeless execution. 
+        </p>
+    </section>
 
-  <!-- GALLERY PREVIEW -->
-  <section class="bg-parchment">
-    <div class="container">
-      <div class="section-head-row reveal" style="margin-bottom: 2.5rem;">
-        <div class="section-head" style="margin-bottom:0;">
-          <span class="eyebrow">From the Studio</span>
-          <h2>A few recent pieces.</h2>
+    <!-- Gallery Section -->
+    <section id="gallery" class="standard-section" style="background-color: white;">
+        <h3 class="section-title">The Portfolio</h3>
+        <p class="section-subtitle">A collection of custom paintings, intricate drawings, and standalone sculptures.</p>
+        <div class="grid">
+            <div class="card">
+                <div class="art-img" style="background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h4>Abstract Formulations</h4>
+                    <p>Acrylic and mixed media on canvas. Vibrant strokes meeting structure.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="art-img" style="background-image: url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h4>Clay & Contour</h4>
+                    <p>Hand-molded clay sculpture emphasizing organic forms and texture.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="art-img" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h4>Monochromatic Ink</h4>
+                    <p>Detailed conceptual ink sketches highlighting light and shadows.</p>
+                </div>
+            </div>
         </div>
-        <a href="gallery.html" class="btn btn-outline dark">See Full Gallery</a>
-      </div>
-      <div class="grid grid-4">
-        <a href="gallery.html" class="art-tile art-1 reveal"><div class="art-paint"></div><div class="art-tag"><p class="art-title">Bayou Morning</p><p class="art-meta">Acrylic on canvas</p></div></a>
-        <a href="gallery.html" class="art-tile art-4 reveal"><div class="art-paint"></div><div class="art-tag"><p class="art-title">Study No. 3</p><p class="art-meta">Graphite on paper</p></div></a>
-        <a href="gallery.html" class="art-tile art-6 reveal"><div class="art-paint"></div><div class="art-tag"><p class="art-title">Held Form</p><p class="art-meta">Stoneware</p></div></a>
-        <a href="gallery.html" class="art-tile art-8 reveal"><div class="art-paint"></div><div class="art-tag"><p class="art-title">Late Light</p><p class="art-meta">Oil on panel</p></div></a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="on-dark">
-    <div class="texture-veil"></div>
-    <div class="container">
-      <div class="text-center reveal" style="margin-bottom: 2.5rem;">
-        <span class="eyebrow">Word of Mouth</span>
-      </div>
-      <div class="testimonial-wrap reveal">
-        <div class="testimonial-slide active">
-          <blockquote>"I asked for something that felt like home and that's exactly what showed up. Catera asked the right questions before ever picking up a brush."</blockquote>
-          <cite>Jordan M., Gonzales</cite>
+    <!-- Reviews Section -->
+    <section id="reviews" class="standard-section" style="background-color: var(--bg-light);">
+        <h3 class="section-title">What Collectors Say</h3>
+        <div class="grid" style="max-width: 1000px; margin: 0 auto;">
+            <div class="card" style="padding: 30px; text-align: center;">
+                <p style="font-style: italic; color: #666;">"The custom painting I commissioned completely transformed my living room. The attention to detail is incredible."</p>
+                <h4 style="margin-top: 15px; color: var(--primary-green);">— Sarah J.</h4>
+            </div>
+            <div class="card" style="padding: 30px; text-align: center;">
+                <p style="font-style: italic; color: #666;">"I booked a consultation for a custom sculpture. The entire process was professional, and the final piece is stunning."</p>
+                <h4 style="margin-top: 15px; color: var(--primary-green);">— Marcus T.</h4>
+            </div>
         </div>
-        <div class="testimonial-slide">
-          <blockquote>"The sculpture commission took a few weeks longer than I expected, but I'd rather it be right than fast. Worth the wait, every time."</blockquote>
-          <cite>Priya R., Baton Rouge</cite>
+    </section>
+
+    <!-- Social Feed Section -->
+    <section id="social" class="standard-section" style="background-color: white;">
+        <h3 class="section-title">Follow @Catera'sCreations</h3>
+        <p class="section-subtitle">Latest from Instagram & TikTok</p>
+        <div style="max-width: 800px; margin: 0 auto; min-height: 300px; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #888;">
+            <!-- Paste your Elfsight or Curator.io widget code here -->
+            [Social Feed Widget Placeholder - Insert Embed Code]
         </div>
-        <div class="testimonial-slide">
-          <blockquote>"Booking a studio visit felt like visiting a friend, not a transaction. Left with a drawing I still can't stop looking at."</blockquote>
-          <cite>Devin T., Prairieville</cite>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="standard-section" style="background-color: var(--bg-light);">
+        <h3 class="section-title">Frequently Asked Questions</h3>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="margin-bottom: 30px;">
+                <h4 style="color: var(--primary-purple); margin-bottom: 10px;">Do you take custom commissions?</h4>
+                <p style="color: #666;">Yes! You can use the contact form below or book an appointment to discuss custom paintings, drawings, or sculptures.</p>
+            </div>
+            <div style="margin-bottom: 30px;">
+                <h4 style="color: var(--primary-purple); margin-bottom: 10px;">Do you ship outside of Gonzales, LA?</h4>
+                <p style="color: #666;">Yes, we offer secure shipping for all art pieces. Local pickup is also available for clients in the local area.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--primary-purple); margin-bottom: 10px;">How do I book an appointment?</h4>
+                <p style="color: #666;">Simply click the "Book Appointment" button in the navigation bar to find a time on the calendar that works for you.</p>
+            </div>
         </div>
-        <div class="testimonial-dots"></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter-band section-tight">
-    <div class="container newsletter-inner">
-      <h3>Get first look at new work, before it's posted anywhere else.</h3>
-      <form class="newsletter-form" data-demo-form data-success-message="You're on the list. Welcome in." novalidate>
-        <div class="field" style="margin:0;">
-          <input type="email" name="email" placeholder="you@email.com" required>
+    <!-- Contact Section -->
+    <section id="contact" class="functional-section">
+        <div class="form-container">
+            <h3>Inquire About a Custom Piece</h3>
+            <p style="margin-bottom: 20px; color: #666;">Want to collaborate on a painting or commission a unique sculpture? Send over the details below.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="Alex Morgan">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="_replyto" required placeholder="alex@example.com">
+                </div>
+                <div class="form-group">
+                    <label>What are we creating?</label>
+                    <textarea name="message" rows="5" required placeholder="Describe your vision (Painting, Drawing, Sculpture, size, color preferences)..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Inquiry</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-cta">Sign Up</button>
-      </form>
-    </div>
-    <div class="container"><p class="form-status" style="max-width:420px; margin-left:auto; background:rgba(251,247,238,.15); border-color:rgba(251,247,238,.4); color:#fff;"></p></div>
-  </section>
+    </section>
 
-  <!-- CTA BANNER -->
-  <section class="bg-parchment text-center">
-    <div class="container reveal">
-      <svg class="brush brush-divider" viewBox="0 0 220 28" aria-hidden="true"><path d="M4,16 C30,4 55,26 82,12 C110,-2 140,22 168,10 C185,4 200,14 216,8"/></svg>
-      <h2 style="margin-top: 1.2rem; font-size: clamp(1.9rem, 3.4vw, 2.7rem);">Have something in mind?<br>Let's build it together.</h2>
-      <div style="margin-top: 2rem;"><a href="booking.html" class="btn btn-primary">Book a Studio Visit</a></div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>Catera's Creation</h5>
+                <p style="color: #aaa; font-size: 0.95rem;">Bringing bold, mature art creations to local spaces in Gonzales, LA and nationwide.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Join the Collector's List</h5>
+                <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Get notified when new collections or drop dates go live.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p style="color: #888; font-size: 0.85rem; margin-top: 10px;">@Catera'sCreations</p>
+            </div>
+        </div>
+        <div class="legal">
+            <p>&copy; 2026 Catera's Creation. All rights reserved. | <a href="privacy.html" style="color:#888;">Privacy Policy</a> | <a href="terms.html" style="color:#888;">Terms & Conditions</a></p>
+        </div>
+    </footer>
 
-</main>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="wordmark small" style="color:#fbf7ee;">Catera's Creation</p>
-      <p class="footer-tagline">Original paintings, drawings &amp; sculpture from Gonzales, Louisiana.</p>
-    </div>
-    <div class="footer-links">
-      <div>
-        <p class="footer-heading">Visit</p>
-        <a href="gallery.html">Gallery</a>
-        <a href="services.html">Services &amp; Pricing</a>
-        <a href="booking.html">Book a Visit</a>
-      </div>
-      <div>
-        <p class="footer-heading">Studio</p>
-        <a href="about.html">About</a>
-        <a href="blog.html">Journal</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-      <div>
-        <p class="footer-heading">Connect</p>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">@Catera'sCreations</a>
-        <button class="link-btn" data-open-privacy>Privacy &amp; Terms</button>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Catera's Creation. All artwork remains the property of the artist.</p>
-    <p class="footer-credit">Site by Sidequest Creative</p>
-  </div>
-</footer>
-
-<div class="modal" id="privacyModal" aria-hidden="true">
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-    <button class="modal-close" data-close-privacy aria-label="Close">×</button>
-    <h3 id="privacyTitle">Privacy &amp; Terms</h3>
-    <p>This is placeholder policy text for demonstration. Before launch, replace this with a real privacy policy and terms of use covering how inquiries, booking details, and newsletter emails are collected and stored.</p>
-    <p>Images and descriptions of artwork on this site are the property of Catera's Creation and may not be reproduced without permission.</p>
-  </div>
-</div>
-
-<script src="script.js"></script>
+    <!-- Calendly Popup Script -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
